@@ -78,7 +78,7 @@ Rails.application.configure do
   # caching is enabled.
   config.action_mailer.perform_caching = false
   # config.action_mailer.default_url_options = { host: "https://therialnews-t21g.onrender.com/" }
-  config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
+  config.action_mailer.default_url_options = { host: "https://crazy4cats-f3ws.onrender.com/" }
   #se agrega metodos
   config.action_mailer.delivery_method = :sendmail
   config.action_mailer.perform_deliveries = true
