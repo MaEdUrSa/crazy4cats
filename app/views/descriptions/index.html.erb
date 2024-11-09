@@ -1,8 +1,10 @@
-<p style="color: green"><%= notice %></p>
+<%# <p style="color: green"><%= notice %>
 
 <% content_for :title, "Descriptions" %>
 
-<h2>Cometarios </h2>
+<div class="d-flex justify-content-between">
+    <h2 class="my-5 text-center">Cometarios </h2>
+ <div>
 <%= link_to "Nuevo Cometario", new_description_path, class:"btn btn-success btn-sm" %>
 
 <div id="descriptions">
