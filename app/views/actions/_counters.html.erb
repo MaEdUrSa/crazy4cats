@@ -1,0 +1,12 @@
+
+  <div class="container">
+    <ul>
+        <% Action.kinds.each do |kind| %>
+            <%# <li>  %>
+            <%#= @article.actions.where(kind: kind).count %> 
+             <%#= kind %> 
+            <%# </li>  %>
+             <li> <%= @article.count_with_kind(kind) %> </li>
+        <% end %>
+    </ul>
+ </div>

@@ -1,0 +1,48 @@
+<%# <p style="color: green"><%= notice %>
+
+<% content_for :title, "Articulo" %>
+
+<div class="d-flex justify-content-between">
+  <h2 class="my-5 text-center">Articulos </h2>
+  <div>
+    <%= link_to "Nuevo Articulo", new_article_path, class:"btn btn-dark my-5" %>
+  </div>
+
+ </div>
+
+<div class="row justify-content-between">
+  <% @articles.each do |article| %>
+    <div class="card col-5 mb-5">
+      <div class="text-center">
+        <% begin %>
+          <%= image_tag article.image, class: "card-img-top w-25" %>
+          <% rescue Sprockets::Rails::Helper::AssetNotFound %>
+          <p class="my-5">No image found</p>
+        <% end %>
+      </div>
+
+
+
+      <div class="card-body">
+        <h5 class="card-title"><%= article.name %></h5>
+          <p class="card-text"> 
+            <%# = article.content.truncate(50) %>
+          </p> 
+        <%= link_to "Ver", article_path(article), class:"btn btn-primary" %>
+         <%= link_to "Cometario", descriptions_path(article.id), class:"btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%# --------------------- %>
+<%# <div id="articles"> %>
+  <%# @articles.each do |article| %>
+    <%#= render article %>
+    <%# <p> %>
+      <%#= link_to "Show this article", article %>
+    <%# </p> %>
+  <%# end %>
+<%# </div> %>
+
+<%#= link_to "New article", new_article_path %>

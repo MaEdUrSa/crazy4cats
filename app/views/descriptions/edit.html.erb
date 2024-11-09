@@ -1,0 +1,12 @@
+<% content_for :title, "Editing description" %>
+
+<h1>Edita cometarios</h1>
+
+<%= render "form", description: @description %>
+
+<br>
+
+<div>
+  <%= link_to "Ver cometarios", @description, class:"btn btn-dark btn-sm"  %> 
+  <%= link_to "Retornar a cometarios", descriptions_path, class:"btn btn-dark btn-sm" %>
+</div>

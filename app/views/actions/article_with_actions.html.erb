@@ -1,0 +1,13 @@
+ <h1>Articulo</h1>
+ <ul>
+    <% @articles.each do |article| %>
+        <li>
+            <%#= article.name %> 
+            <%#= article.actions.find_by(customer_id: current_customer.id).kind %>
+             <%= article.find_kind_customer_relation(current_customer) %>
+            <p>
+                <%= link_to "ver Articulos", product %>
+            </p>
+        </li>
+    <% end %>
+ </ul>

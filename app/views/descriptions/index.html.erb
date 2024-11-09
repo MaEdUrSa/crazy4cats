@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Descriptions" %>
+
+<h2>Cometarios </h2>
+<%= link_to "Nuevo Cometario", new_description_path, class:"btn btn-success btn-sm" %>
+
+<div id="descriptions">
+  <% @descriptions.each do |description| %>
+    <%#= render description %>
+    <div class = "row">
+          <p>Comentario: <%= description.content  %></p>
+          <p>Articulo :  <%=  description.article.id  %></p>
+          <p>Texto articulo:  <%=  description.article.name  %></p>
+    </div>
+    <p>
+      <%= link_to "Ver Cometarios", description, class:"btn btn-dark btn-sm" %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Nuevo Cometario", new_description_path, class:"btn btn-success btn-sm" %>

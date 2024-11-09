@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<%#= render @description %>
+
+      <div>
+        <div class="text-center">
+
+          <p>Comentario: <%= @description.content  %></p>
+          <p>Articulo :  <%=  @description.article.id  %></p>
+          <p>texto articulo:  <%=  @description.article.name  %></p>
+      
+   </div>
+
+
+
+<div class = "  text-center">
+  <%= link_to "Edita comentenido", edit_description_path(@description), class:"btn btn-dark btn-sm" %>
+  <%= link_to "Retorna Comentarios", descriptions_path, class:"btn btn-dark btn-sm" %>
+  <%= link_to "Retorna Articulo", root_path, class:"btn btn-dark btn-sm" %>
+  
+
+
+</div>

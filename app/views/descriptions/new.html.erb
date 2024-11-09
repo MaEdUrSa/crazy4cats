@@ -1,0 +1,11 @@
+<% content_for :title, "New description" %>
+
+<h1>Nuevo comentario</h1>
+
+<%= render "form", description: @description %>
+
+<br>
+
+<div>
+  <%= link_to "Retornar a cometarios", descriptions_path, class:"btn btn-dark btn-sm" %>
+</div>

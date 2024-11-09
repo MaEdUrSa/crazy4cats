@@ -1,0 +1,7 @@
+ <div class="container">
+  <ul>
+    <% Action.kinds.each do |kind| %>
+      <li><%= button_to "#{kind}", customer_action_path(article_id: @article.id, kind: kind), method: :post %></li>
+    <% end %>
+  </ul>
+ </div>

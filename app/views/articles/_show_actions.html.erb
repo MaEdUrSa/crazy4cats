@@ -1,0 +1,18 @@
+ <div class="row">
+    <div class="col-6">
+        <%= render @article %>
+    </div>
+
+  <div class="col-6">
+    <ol class="list-group list-group-numbered">
+      <% @articles.actions.each do |aa| %>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold"><%= aa.name %></div>
+            <span class="badge bg-primary rounded-pill"><%= aa.articles.count %></span>
+          </div>
+        </li>
+      <% end %>
+    </ol>
+  </div>
+ </div>
